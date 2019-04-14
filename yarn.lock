@@ -896,25 +896,6 @@
     xcode "^2.0.0"
     xmldoc "^0.4.0"
 
-"@react-navigation/core@~3.3.0":
-  version "3.3.0"
-  resolved "http://registry.npm.taobao.org/@react-navigation/core/download/@react-navigation/core-3.3.0.tgz#a8fa76e1c2a0da588da3d94ec9ea0956b7df753e"
-  integrity sha1-qPp24cKg2liNo9lOyeoJVrffdT4=
-  dependencies:
-    hoist-non-react-statics "^2.5.5"
-    path-to-regexp "^1.7.0"
-    query-string "^6.2.0"
-    react-is "^16.6.3"
-
-"@react-navigation/native@~3.4.0":
-  version "3.4.1"
-  resolved "http://registry.npm.taobao.org/@react-navigation/native/download/@react-navigation/native-3.4.1.tgz#e1fbf334ac834a9f10dd7d9c3af3e36939486089"
-  integrity sha1-4fvzNKyDSp8Q3X2cOvPjaTlIYIk=
-  dependencies:
-    hoist-non-react-statics "^3.0.1"
-    react-native-safe-area-view "^0.13.0"
-    react-native-screens "^1.0.0 || ^1.0.0-alpha"
-
 "@types/babel__core@^7.1.0":
   version "7.1.0"
   resolved "http://registry.npm.taobao.org/@types/babel__core/download/@types/babel__core-7.1.0.tgz#710f2487dda4dcfd010ca6abb2b4dc7394365c51"
@@ -1742,6 +1723,11 @@ ci-info@^2.0.0:
   resolved "http://registry.npm.taobao.org/ci-info/download/ci-info-2.0.0.tgz#67a9e964be31a51e15e5010d58e6f12834002f46"
   integrity sha1-Z6npZL4xpR4V5QENWObxKDQAL0Y=
 
+clamp@^1.0.1:
+  version "1.0.1"
+  resolved "http://registry.npm.taobao.org/clamp/download/clamp-1.0.1.tgz#66a0e64011816e37196828fdc8c8c147312c8634"
+  integrity sha1-ZqDmQBGBbjcZaCj9yMjBRzEshjQ=
+
 class-utils@^0.3.5:
   version "0.3.6"
   resolved "http://registry.npm.taobao.org/class-utils/download/class-utils-0.3.6.tgz#f93369ae8b9a7ce02fd41faad0ca83033190c463"
@@ -1954,6 +1940,14 @@ create-react-class@^15.6.0, create-react-class@^15.6.3:
     fbjs "^0.8.9"
     loose-envify "^1.3.1"
     object-assign "^4.1.1"
+
+create-react-context@0.2.2:
+  version "0.2.2"
+  resolved "http://registry.npm.taobao.org/create-react-context/download/create-react-context-0.2.2.tgz#9836542f9aaa22868cd7d4a6f82667df38019dca"
+  integrity sha1-mDZUL5qqIoaM19Sm+CZn3zgBnco=
+  dependencies:
+    fbjs "^0.8.0"
+    gud "^1.0.0"
 
 cross-spawn@^5.0.1, cross-spawn@^5.1.0:
   version "5.1.0"
@@ -2498,7 +2492,7 @@ fbjs-scripts@^1.0.0:
     semver "^5.1.0"
     through2 "^2.0.0"
 
-fbjs@^0.8.9:
+fbjs@^0.8.0, fbjs@^0.8.9:
   version "0.8.17"
   resolved "http://registry.npm.taobao.org/fbjs/download/fbjs-0.8.17.tgz#c4d598ead6949112653d6588b01a5cdcd9f90fdd"
   integrity sha1-xNWY6taUkRJlPWWIsBpc3Nn5D90=
@@ -2797,6 +2791,11 @@ growly@^1.3.0:
   resolved "http://registry.npm.taobao.org/growly/download/growly-1.3.0.tgz#f10748cbe76af964b7c96c93c6bcc28af120c081"
   integrity sha1-8QdIy+dq+WS3yWyTxrzCivEgwIE=
 
+gud@^1.0.0:
+  version "1.0.0"
+  resolved "http://registry.npm.taobao.org/gud/download/gud-1.0.0.tgz#a489581b17e6a70beca9abe3ae57de7a499852c0"
+  integrity sha1-pIlYGxfmpwvsqavjrlfeekmYUsA=
+
 handlebars@^4.1.0:
   version "4.1.1"
   resolved "http://registry.npm.taobao.org/handlebars/download/handlebars-4.1.1.tgz#6e4e41c18ebe7719ae4d38e5aca3d32fa3dd23d3"
@@ -2881,12 +2880,12 @@ has@^1.0.1, has@^1.0.3:
   dependencies:
     function-bind "^1.1.1"
 
-hoist-non-react-statics@^2.3.1, hoist-non-react-statics@^2.5.0, hoist-non-react-statics@^2.5.5:
+hoist-non-react-statics@^2.2.0, hoist-non-react-statics@^2.3.1, hoist-non-react-statics@^2.5.0:
   version "2.5.5"
   resolved "http://registry.npm.taobao.org/hoist-non-react-statics/download/hoist-non-react-statics-2.5.5.tgz#c5903cf409c0dfd908f388e619d86b9c1174cb47"
   integrity sha1-xZA89AnA39kI84jmGdhrnBF0y0c=
 
-hoist-non-react-statics@^3.0.1, hoist-non-react-statics@^3.3.0:
+hoist-non-react-statics@^3.3.0:
   version "3.3.0"
   resolved "http://registry.npm.taobao.org/hoist-non-react-statics/download/hoist-non-react-statics-3.3.0.tgz#b09178f0122184fb95acf525daaecb4d8f45958b"
   integrity sha1-sJF48BIhhPuVrPUl2q7LTY9FlYs=
@@ -5173,7 +5172,7 @@ prompts@^2.0.1:
     kleur "^3.0.2"
     sisteransi "^1.0.0"
 
-prop-types@^15.5.10, prop-types@^15.5.8, prop-types@^15.6.1, prop-types@^15.6.2, prop-types@^15.7.2:
+prop-types@^15.5.10, prop-types@^15.5.8, prop-types@^15.6.0, prop-types@^15.6.1, prop-types@^15.6.2, prop-types@^15.7.2:
   version "15.7.2"
   resolved "http://registry.npm.taobao.org/prop-types/download/prop-types-15.7.2.tgz?cache=0&other_urls=http%3A%2F%2Fregistry.npm.taobao.org%2Fprop-types%2Fdownload%2Fprop-types-15.7.2.tgz#52c41e75b8c87e72b9d9360e0206b99dcbffa6c5"
   integrity sha1-UsQedbjIfnK52TYOAga5ncv/psU=
@@ -5220,9 +5219,9 @@ qs@~6.5.2:
   resolved "http://registry.npm.taobao.org/qs/download/qs-6.5.2.tgz#cb3ae806e8740444584ef154ce8ee98d403f3e36"
   integrity sha1-yzroBuh0BERYTvFUzo7pjUA/PjY=
 
-query-string@^6.2.0:
+query-string@^6.1.0:
   version "6.4.2"
-  resolved "http://registry.npm.taobao.org/query-string/download/query-string-6.4.2.tgz#8be1dbd105306aebf86022144f575a29d516b713"
+  resolved "http://registry.npm.taobao.org/query-string/download/query-string-6.4.2.tgz?cache=0&other_urls=http%3A%2F%2Fregistry.npm.taobao.org%2Fquery-string%2Fdownload%2Fquery-string-6.4.2.tgz#8be1dbd105306aebf86022144f575a29d516b713"
   integrity sha1-i+Hb0QUwauv4YCIUT1daKdUWtxM=
   dependencies:
     decode-uri-component "^0.2.0"
@@ -5278,12 +5277,12 @@ react-devtools-core@^3.6.0:
     shell-quote "^1.6.1"
     ws "^3.3.1"
 
-react-is@^16.6.3, react-is@^16.7.0, react-is@^16.8.1, react-is@^16.8.3, react-is@^16.8.4, react-is@^16.8.6:
+react-is@^16.5.2, react-is@^16.7.0, react-is@^16.8.1, react-is@^16.8.3, react-is@^16.8.4, react-is@^16.8.6:
   version "16.8.6"
   resolved "http://registry.npm.taobao.org/react-is/download/react-is-16.8.6.tgz#5bbc1e2d29141c9fbdfed456343fe2bc430a6a16"
   integrity sha1-W7weLSkUHJ+9/tRWND/ivEMKahY=
 
-react-lifecycles-compat@^3.0.4:
+react-lifecycles-compat@^3, react-lifecycles-compat@^3.0.4:
   version "3.0.4"
   resolved "http://registry.npm.taobao.org/react-lifecycles-compat/download/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
   integrity sha1-TxonOv38jzSIqMUWv9p4+HI1I2I=
@@ -5305,6 +5304,25 @@ react-native-debugger-open@^0.3.19:
     minimist "^1.2.0"
     semver "^5.4.1"
 
+react-native-dismiss-keyboard@1.0.0:
+  version "1.0.0"
+  resolved "http://registry.npm.taobao.org/react-native-dismiss-keyboard/download/react-native-dismiss-keyboard-1.0.0.tgz#32886242b3f2317e121f3aeb9b0a585e2b879b49"
+  integrity sha1-MohiQrPyMX4SHzrrmwpYXiuHm0k=
+
+react-native-drawer-layout-polyfill@^1.3.2:
+  version "1.3.2"
+  resolved "http://registry.npm.taobao.org/react-native-drawer-layout-polyfill/download/react-native-drawer-layout-polyfill-1.3.2.tgz#192c84d7a5a6b8a6d2be2c7daa5e4164518d0cc7"
+  integrity sha1-GSyE16WmuKbSvix9ql5BZFGNDMc=
+  dependencies:
+    react-native-drawer-layout "1.3.2"
+
+react-native-drawer-layout@1.3.2:
+  version "1.3.2"
+  resolved "http://registry.npm.taobao.org/react-native-drawer-layout/download/react-native-drawer-layout-1.3.2.tgz#b9740d7663a1dc4f88a61b9c6d93d2d948ea426e"
+  integrity sha1-uXQNdmOh3E+IphucbZPS2UjqQm4=
+  dependencies:
+    react-native-dismiss-keyboard "1.0.0"
+
 react-native-gesture-handler@^1.1.0:
   version "1.1.0"
   resolved "http://registry.npm.taobao.org/react-native-gesture-handler/download/react-native-gesture-handler-1.1.0.tgz#2a7d545ad2e0ca23adce22b2af441ad360ecccee"
@@ -5323,21 +5341,14 @@ react-native-modal-popover@^0.0.12:
     lodash.debounce "^4.0.8"
     prop-types "^15.6.2"
 
-react-native-safe-area-view@^0.11.0:
+react-native-safe-area-view@0.11.0, react-native-safe-area-view@^0.11.0:
   version "0.11.0"
   resolved "http://registry.npm.taobao.org/react-native-safe-area-view/download/react-native-safe-area-view-0.11.0.tgz#4f3dda43c2bace37965e7c6aef5fc83d4f19d174"
   integrity sha1-Tz3aQ8K6zjeWXnxq71/IPU8Z0XQ=
   dependencies:
     hoist-non-react-statics "^2.3.1"
 
-react-native-safe-area-view@^0.13.0:
-  version "0.13.1"
-  resolved "http://registry.npm.taobao.org/react-native-safe-area-view/download/react-native-safe-area-view-0.13.1.tgz#834bbb6d22f76a7ff07de56725ee5667ba1386b0"
-  integrity sha1-g0u7bSL3an/wfeVnJe5WZ7oThrA=
-  dependencies:
-    hoist-non-react-statics "^2.3.1"
-
-"react-native-screens@^1.0.0 || ^1.0.0-alpha":
+react-native-screens@^1.0.0-alpha.11:
   version "1.0.0-alpha.22"
   resolved "http://registry.npm.taobao.org/react-native-screens/download/react-native-screens-1.0.0-alpha.22.tgz#7a120377b52aa9bbb94d0b8541a014026be9289b"
   integrity sha1-ehIDd7Uqqbu5TQuFQaAUAmvpKJs=
@@ -5351,7 +5362,14 @@ react-native-swipeout@^2.3.6:
     prop-types "^15.5.10"
     react-tween-state "^0.1.5"
 
-react-native-tab-view@^1.2.0, react-native-tab-view@^1.3.4:
+react-native-tab-view@^0.0.77:
+  version "0.0.77"
+  resolved "http://registry.npm.taobao.org/react-native-tab-view/download/react-native-tab-view-0.0.77.tgz#11ceb8e7c23100d07e628dc151b57797524d00d4"
+  integrity sha1-Ec6458IxANB+Yo3BUbV3l1JNANQ=
+  dependencies:
+    prop-types "^15.6.0"
+
+react-native-tab-view@^1.0.0:
   version "1.3.4"
   resolved "http://registry.npm.taobao.org/react-native-tab-view/download/react-native-tab-view-1.3.4.tgz#63fc3eb09652651d0ea0e016cff0f3a5e535f4de"
   integrity sha1-Y/w+sJZSZR0OoOAWz/DzpeU19N4=
@@ -5414,45 +5432,60 @@ react-native@0.59.3:
     xmldoc "^0.4.0"
     yargs "^9.0.0"
 
-react-navigation-drawer@1.2.1:
-  version "1.2.1"
-  resolved "http://registry.npm.taobao.org/react-navigation-drawer/download/react-navigation-drawer-1.2.1.tgz#7bd5efeee7d2f611d3ebb0933e0c8e8eb7cafe52"
-  integrity sha1-e9Xv7ufS9hHT67CTPgyOjrfK/lI=
+react-navigation-deprecated-tab-navigator@1.3.0:
+  version "1.3.0"
+  resolved "http://registry.npm.taobao.org/react-navigation-deprecated-tab-navigator/download/react-navigation-deprecated-tab-navigator-1.3.0.tgz#015dcae1e977b984ca7e99245261c15439026bb7"
+  integrity sha1-AV3K4el3uYTKfpkkUmHBVDkCa7c=
   dependencies:
-    react-native-tab-view "^1.2.0"
+    react-native-tab-view "^0.0.77"
 
-react-navigation-redux-helpers@^3.0.0:
-  version "3.0.2"
-  resolved "http://registry.npm.taobao.org/react-navigation-redux-helpers/download/react-navigation-redux-helpers-3.0.2.tgz#612e1d5b1378ba0c17b6a2d8ec9a01cc698a3a16"
-  integrity sha1-YS4dWxN4ugwXtqLY7JoBzGmKOhY=
+react-navigation-drawer@0.5.0:
+  version "0.5.0"
+  resolved "http://registry.npm.taobao.org/react-navigation-drawer/download/react-navigation-drawer-0.5.0.tgz#d91b6a6ec65c34ba78c00f814b1e6508922cc9ec"
+  integrity sha1-2RtqbsZcNLp4wA+BSx5lCJIsyew=
+  dependencies:
+    react-native-drawer-layout-polyfill "^1.3.2"
+
+react-navigation-redux-helpers@^2.0.2:
+  version "2.0.9"
+  resolved "http://registry.npm.taobao.org/react-navigation-redux-helpers/download/react-navigation-redux-helpers-2.0.9.tgz#244e7ebbc43481602b1e7948a491b34a312dca06"
+  integrity sha1-JE5+u8Q0gWArHnlIpJGzSjEtygY=
   dependencies:
     invariant "^2.2.2"
 
-react-navigation-stack@1.3.0:
-  version "1.3.0"
-  resolved "http://registry.npm.taobao.org/react-navigation-stack/download/react-navigation-stack-1.3.0.tgz#34bbddb068c094c9ab843e36059b9fd92b728250"
-  integrity sha1-NLvdsGjAlMmrhD42BZuf2StyglA=
+react-navigation-stack@0.7.0:
+  version "0.7.0"
+  resolved "http://registry.npm.taobao.org/react-navigation-stack/download/react-navigation-stack-0.7.0.tgz#0b2f139ee1cba953037ef51353df992ec6c74fa2"
+  integrity sha1-Cy8TnuHLqVMDfvUTU9+ZLsbHT6I=
 
-react-navigation-tabs@1.1.2:
-  version "1.1.2"
-  resolved "http://registry.npm.taobao.org/react-navigation-tabs/download/react-navigation-tabs-1.1.2.tgz#10b7501522d99960340a0d23a471d571b70aeb82"
-  integrity sha1-ELdQFSLZmWA0Cg0jpHHVcbcK64I=
+react-navigation-tabs@0.8.4:
+  version "0.8.4"
+  resolved "http://registry.npm.taobao.org/react-navigation-tabs/download/react-navigation-tabs-0.8.4.tgz#aa767f28b899f13c99f2b034b4a665f8cf0a5737"
+  integrity sha1-qnZ/KLiZ8TyZ8rA0tKZl+M8KVzc=
   dependencies:
     hoist-non-react-statics "^2.5.0"
     prop-types "^15.6.1"
     react-lifecycles-compat "^3.0.4"
-    react-native-tab-view "^1.3.4"
+    react-native-tab-view "^1.0.0"
 
-react-navigation@^3.5.0:
-  version "3.8.1"
-  resolved "http://registry.npm.taobao.org/react-navigation/download/react-navigation-3.8.1.tgz#9df7ba8a7d3f4d2487dab576b79cf9cfc7f93d5a"
-  integrity sha1-nfe6in0/TSSH2rV2t5z5z8f5PVo=
+react-navigation@^2.5.1:
+  version "2.18.3"
+  resolved "http://registry.npm.taobao.org/react-navigation/download/react-navigation-2.18.3.tgz#de9a24dc37dfc33f3e4779a9f13f45ea97dfe19e"
+  integrity sha1-3pok3Dffwz8+R3mp8T9F6pff4Z4=
   dependencies:
-    "@react-navigation/core" "~3.3.0"
-    "@react-navigation/native" "~3.4.0"
-    react-navigation-drawer "1.2.1"
-    react-navigation-stack "1.3.0"
-    react-navigation-tabs "1.1.2"
+    clamp "^1.0.1"
+    create-react-context "0.2.2"
+    hoist-non-react-statics "^2.2.0"
+    path-to-regexp "^1.7.0"
+    query-string "^6.1.0"
+    react-is "^16.5.2"
+    react-lifecycles-compat "^3"
+    react-native-safe-area-view "0.11.0"
+    react-native-screens "^1.0.0-alpha.11"
+    react-navigation-deprecated-tab-navigator "1.3.0"
+    react-navigation-drawer "0.5.0"
+    react-navigation-stack "0.7.0"
+    react-navigation-tabs "0.8.4"
 
 react-proxy@^1.1.7:
   version "1.1.8"

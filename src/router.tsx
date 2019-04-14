@@ -6,7 +6,7 @@ import {
   NavigationActions,
 } from 'react-navigation'
 import {
-  createReduxContainer,
+  reduxifyNavigator,
   createReactNavigationReduxMiddleware,
   createNavigationReducer,
 } from 'react-navigation-redux-helpers'
@@ -14,77 +14,75 @@ import { connect } from 'react-redux'
 
 import Loading from './components/Loading'
 import Login from './containers/Login'
-// import Home from './containers/Home'
-// import Account from './containers/Account'
-// import Detail from './containers/Detail'
+import Home from './containers/Home'
+import Account from './containers/Account'
+import Detail from './containers/Detail'
 
-// const HomeNavigator = createBottomTabNavigator({
-//   Home,
-//   Account,
-// })
+const HomeNavigator = createBottomTabNavigator({
+  Home,
+  Account,
+})
 
-// HomeNavigator.navigationOptions = ({ navigation }) => {
-//   const { routeName } = navigation.state.routes[navigation.state.index];
+HomeNavigator.navigationOptions = ({ navigation }) => {
+  const { routeName } = navigation.state.routes[navigation.state.index];
 
-//   return {
-//     headerTitle: routeName,
-//   }
-// }
+  return {
+    headerTitle: routeName,
+  }
+}
 
-// const MainNavigator = createStackNavigator(
-//   {
-//     HomeNavigator,
-//     Detail,
-//   },
-//   // {
-//   //   headerMode: 'float',
-//   // }
-// )
+const MainNavigator = createStackNavigator(
+  {
+    HomeNavigator,
+    Detail,
+  },
+  {
+    headerMode: 'float',
+  }
+)
 
 const AppNavigator = createStackNavigator(
   {
-    // Main: MainNavigator,
+    Main: MainNavigator,
     Login,
   },
   {
-    initialRouteName: 'Login'
+    headerMode: 'none',
+    mode: 'modal',
+    navigationOptions: {
+      gesturesEnabled: false,
+    },
+    transitionConfig: () => ({
+      transitionSpec: {
+        duration: 300,
+        easing: Easing.out(Easing.poly(4)),
+        timing: Animated.timing,
+      },
+      screenInterpolator: sceneProps => {
+        const { layout, position, scene } = sceneProps
+        const { index } = scene
+
+        const height = layout.initHeight
+        const translateY = position.interpolate({
+          inputRange: [index - 1, index, index + 1],
+          outputRange: [height, 0, 0],
+        })
+
+        const opacity = position.interpolate({
+          inputRange: [index - 1, index - 0.99, index],
+          outputRange: [0, 1, 1],
+        })
+
+        return { opacity, transform: [{ translateY }] }
+      },
+    }),
   }
-  // {
-  //   headerMode: 'none',
-  //   mode: 'modal',
-  //   navigationOptions: {
-  //     gesturesEnabled: false,
-  //   },
-  //   transitionConfig: () => ({
-  //     transitionSpec: {
-  //       duration: 300,
-  //       easing: Easing.out(Easing.poly(4)),
-  //       timing: Animated.timing,
-  //     },
-  //     screenInterpolator: sceneProps => {
-  //       const { layout, position, scene } = sceneProps
-  //       const { index } = scene
-
-  //       const height = layout.initHeight
-  //       const translateY = position.interpolate({
-  //         inputRange: [index - 1, index, index + 1],
-  //         outputRange: [height, 0, 0],
-  //       })
-
-  //       const opacity = position.interpolate({
-  //         inputRange: [index - 1, index - 0.99, index],
-  //         outputRange: [0, 1, 1],
-  //       })
-
-  //       return { opacity, transform: [{ translateY }] }
-  //     },
-  //   }),
-  // }
 )
 
 export const routerReducer = createNavigationReducer(AppNavigator)
 
 export const routerMiddleware = createReactNavigationReduxMiddleware(
+  'root',
   state => {
     // debugger
     return state.router;
@@ -92,12 +90,7 @@ export const routerMiddleware = createReactNavigationReduxMiddleware(
 )
 
 
-const App = createReduxContainer(AppNavigator);
-
-const mapStateToProps = (state) => ({
-  state: state.router,
-});
-const AppWithNavigationState = connect(mapStateToProps)(App);;
+const App = reduxifyNavigator(AppNavigator, 'root');
 
 function getActiveRouteName(navigationState) {
   if (!navigationState) {
@@ -120,9 +113,7 @@ class Router extends PureComponent {
   }
 
   backHandle = () => {
-    debugger
     const currentScreen = getActiveRouteName(this.props.router)
-    debugger
     if (currentScreen === 'Login') {
       return true
     }
@@ -136,7 +127,7 @@ class Router extends PureComponent {
   render() {
     const { app, dispatch, router } = this.props
     if (app.loading) return <Loading />
-    return <AppWithNavigationState />
+    return <App dispatch={dispatch} state={router} />
   }
 }
 
