@@ -1,3 +1,7 @@
+/**
+ * 全部请求方法
+ * @author ronffy
+ */
 import qs from  'qs';
 
 const defaultOptions = {
@@ -13,7 +17,7 @@ type ChainItem = ((args: any) => any) | undefined;
 
 interface RequestConfig {
   url: string;
-  method: string;
+  method?: string;
   body?: any;
   headers?: any;
   [props: string]: any;
@@ -25,8 +29,6 @@ let interceptors = {
   request: [],
   response: [],
 }
-
-
 
 
 function dispatchRequest(config: RequestConfig): Promise<Response> {
@@ -60,8 +62,6 @@ const request = function (url: string, options: RequestInit = {}): Promise<any> 
     url,
     ...options,
   }
-
-  return dispatchRequest(config);
 
   let chain: ChainItem[] = [dispatchRequest, undefined];
   let promise = Promise.resolve(config);

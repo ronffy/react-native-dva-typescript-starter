@@ -1,18 +1,25 @@
 import React, { Component } from 'react'
 import { StyleSheet, View } from 'react-native'
 import { connect } from 'react-redux'
-
 import { Button } from '../components'
-
 import { NavigationActions } from '../utils'
+import { DispatchProp } from 'react-redux';
 
-class Detail extends Component {
+
+interface OwnProps {
+}
+type Props = DispatchProp & OwnProps;
+
+type State = {
+}
+
+class Detail extends Component<Props, State> {
   static navigationOptions = {
     title: 'Detail',
   }
 
   goBack = () => {
-    this.props.dispatch(NavigationActions.back({ routeName: 'Account' }))
+    this.props.dispatch(NavigationActions.back({ key: 'Account' }))
   }
 
   render() {

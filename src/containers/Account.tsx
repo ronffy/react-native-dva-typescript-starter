@@ -1,15 +1,24 @@
 import React, { Component } from 'react'
 import { StyleSheet, View, Image } from 'react-native'
-import { connect } from 'react-redux'
-
+import { connect, DispatchProp } from 'react-redux'
 import { Button } from '../components'
-
 import { createAction, NavigationActions } from '../utils'
+import { WholeState } from '../types/globals';
 
-class Account extends Component {
+
+
+
+interface StateProps {
+  login: boolean;
+}
+interface OwnProps {
+}
+type Props = DispatchProp & StateProps & OwnProps;
+
+class Account extends Component<Props> {
   static navigationOptions = {
     tabBarLabel: 'Account',
-    tabBarIcon: ({ focused, tintColor }) => (
+    tabBarIcon: ({ focused, tintColor }: any) => (
       <Image
         style={[styles.icon, { tintColor: focused ? tintColor : 'gray' }]}
         source={require('../images/person.png')}
@@ -39,9 +48,6 @@ class Account extends Component {
   }
 }
 
-
-
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -54,4 +60,4 @@ const styles = StyleSheet.create({
   },
 })
 
-export default connect(({ app }) => ({ ...app }))(Account)
+export default connect(({ app }: WholeState) => ({ login: app.login }))(Account)

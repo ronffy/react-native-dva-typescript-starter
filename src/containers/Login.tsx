@@ -1,45 +1,53 @@
 import React, { Component } from 'react'
 import { StyleSheet, View, Text, Image, ActivityIndicator } from 'react-native'
-import { connect } from 'react-redux'
-
+import { connect, DispatchProp } from 'react-redux'
 import { Button, Touchable } from '../components'
-
 import { createAction, NavigationActions } from '../utils'
+import { WholeState } from '../types/globals';
 
-// class Login extends Component {
-//   static navigationOptions = {
-//     title: 'Login',
-//   }
+interface StateProps {
+  login: boolean;
+  loading: boolean;
+  fetching: boolean;
+}
+interface OwnProps {
+}
+type Props = DispatchProp & StateProps & OwnProps;
 
-//   onLogin = () => {
-//     this.props.dispatch(createAction('app/login')())
-//   }
+class Login extends Component<Props> {
+  static navigationOptions = {
+    title: 'Login',
+  }
 
-//   onClose = () => {
-//     this.props.dispatch(NavigationActions.back())
-//   }
+  onLogin = () => {
+    this.props.dispatch(createAction('app/login')())
+  }
 
-//   render() {
-//     const { fetching } = this.props
-//     return (
-//       <View style={styles.container}>
-//         {fetching ? (
-//           <ActivityIndicator />
-//         ) : (
-//           <Button text="Login" onPress={this.onLogin} />
-//         )}
-//         {!fetching && (
-//           <Touchable style={styles.close} onPress={this.onClose}>
-//             <Image
-//               style={styles.icon}
-//               source={require('../images/close.png')}
-//             />
-//           </Touchable>
-//         )}
-//       </View>
-//     )
-//   }
-// }
+  onClose = () => {
+    this.props.dispatch(NavigationActions.back())
+  }
+
+  render() {
+    const { fetching } = this.props
+    return (
+      <View style={styles.container}>
+        {fetching ? (
+          <ActivityIndicator />
+        ) : (
+          <Button text="Login" onPress={this.onLogin} />
+        )}
+        {!fetching && (
+          <Touchable style={styles.close} onPress={this.onClose}>
+            <Image
+              style={styles.icon}
+              source={require('../images/close.png')}
+            />
+          </Touchable>
+        )}
+      </View>
+    )
+  }
+}
 
 const styles = StyleSheet.create({
   container: {
@@ -59,13 +67,5 @@ const styles = StyleSheet.create({
   },
 })
 
-// export default connect(({ app }) => ({ ...app }))(Login)
+export default connect(({ app }: WholeState) => ({ ...app }))(Login)
 
-
-export default function Login(params:type) {
-  return (
-    <View>
-      <Text>aaaa</Text>
-    </View>
-  )
-}

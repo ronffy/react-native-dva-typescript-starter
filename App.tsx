@@ -2,11 +2,11 @@ import React from 'react'
 
 import dva from './src/utils/dva'
 import Router, { routerMiddleware, routerReducer } from './src/router'
-import appModel from './src/models/app'
+import models from './src/models'
 
 const app = dva({
   initialState: {},
-  models: [appModel],
+  models,
   extraReducers: { router: routerReducer },
   onAction: [routerMiddleware],
   onError(e: any) {

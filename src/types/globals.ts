@@ -7,11 +7,14 @@ export interface BaseProps {
   [props: string]: any;
 }
 
-import { State as GlobalsState, OwnAction as _GlobalsAction } from '../reducers/globals';
+import { State as AppState } from '../models/app';
+import { State as DemoState } from '../models/demo';
+
+export type AppState = AppState;
+export type DemoState = DemoState;
 
 export interface WholeState {
-  globals: GlobalsState;
+  app: AppState;
+  demo: DemoState;
+  router: any;
 }
-
-export type GlobalsAction = _GlobalsAction;
-

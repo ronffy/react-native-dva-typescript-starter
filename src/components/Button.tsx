@@ -1,13 +1,21 @@
 import React from 'react'
 import { StyleSheet, Text } from 'react-native'
-
 import Touchable from './Touchable'
+import { BaseProps } from '../types/globals';
 
-export const Button = ({ text, children, style, textStyle, ...rest }) => (
-  <Touchable style={[styles.button, style]} {...rest}>
-    <Text style={[styles.text, textStyle]}>{text || children}</Text>
-  </Touchable>
-)
+interface OwnProps {
+  text: string;
+}
+
+type Props = BaseProps & OwnProps;
+
+export function Button({ text, children, style, textStyle, ...rest }: Props) {
+  return (
+    <Touchable style={[styles.button, style]} {...rest}>
+      <Text style={[styles.text, textStyle]}>{text || children}</Text>
+    </Touchable>
+  )
+}
 
 const styles = StyleSheet.create({
   button: {

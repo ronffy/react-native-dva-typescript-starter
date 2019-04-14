@@ -6,16 +6,19 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { Button, Icon } from '@ant-design/react-native';
-import { BaseProps } from '../types/globals';
+import { connect, DispatchProp } from 'react-redux';
+import { NavigationActions } from '../utils'
 
 interface OwnProps {
 }
-type Props = BaseProps & OwnProps;
+type Props = DispatchProp & OwnProps;
 
-export default class Mylife extends React.Component<Props> {
+class Mylife extends React.Component<Props> {
 
   onPressRouteBtn = () => {
-    this.props.navigation.navigate('Mywork');
+    this.props.dispatch(NavigationActions.navigate({
+      routeName: 'Mywork'
+    }));
   }
 
   static navigationOptions = {
@@ -46,6 +49,8 @@ export default class Mylife extends React.Component<Props> {
     );
   }
 }
+
+export default connect()(Mylife)
 
 const styles = StyleSheet.create({
   btn: {

@@ -6,6 +6,6 @@ export { default as strTemplate } from './strTemplate'
 
 export { default as request } from './request'
 
-export const delay = time => new Promise(resolve => setTimeout(resolve, time))
+export const delay = (time: number) => new Promise(resolve => setTimeout(resolve, time))
 
-export const createAction = type => payload => ({ type, payload })
+export const createAction = (type: string) => (payload?: any) => ({ type, payload })

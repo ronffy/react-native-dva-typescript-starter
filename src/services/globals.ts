@@ -2,11 +2,17 @@
 import { request, strTemplate } from '../utils';
 import { API } from '../config';
 
-export const login = async () => {
-  await new Promise(res => setTimeout(() => {
-    res()
-  }, 1000))
-  return true
+export const login = () => {
+  return request(API.test1)
+}
+
+
+export const requestChangeText = (name: string) => {
+  return request(API.test1, {
+    body: {
+      name
+    }
+  })
 }
 
 

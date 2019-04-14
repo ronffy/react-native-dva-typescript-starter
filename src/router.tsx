@@ -10,20 +10,23 @@ import {
   createReactNavigationReduxMiddleware,
   createNavigationReducer,
 } from 'react-navigation-redux-helpers'
-import { connect } from 'react-redux'
+import { connect, DispatchProp } from 'react-redux'
 
 import Loading from './components/Loading'
 import Login from './containers/Login'
-import Home from './containers/Home'
+import Home from './containers/Demo'
 import Account from './containers/Account'
 import Detail from './containers/Detail'
+
+import { WholeState, AppState } from './types/globals';
+
 
 const HomeNavigator = createBottomTabNavigator({
   Home,
   Account,
 })
 
-HomeNavigator.navigationOptions = ({ navigation }) => {
+HomeNavigator.navigationOptions = ({ navigation }: any) => {
   const { routeName } = navigation.state.routes[navigation.state.index];
 
   return {
@@ -83,16 +86,13 @@ export const routerReducer = createNavigationReducer(AppNavigator)
 
 export const routerMiddleware = createReactNavigationReduxMiddleware(
   'root',
-  state => {
-    // debugger
-    return state.router;
-  }
+  (state: WholeState) => state.router
 )
 
 
-const App = reduxifyNavigator(AppNavigator, 'root');
+const App: any = reduxifyNavigator(AppNavigator, 'root');
 
-function getActiveRouteName(navigationState) {
+function getActiveRouteName(navigationState: any): any {
   if (!navigationState) {
     return null
   }
@@ -103,7 +103,13 @@ function getActiveRouteName(navigationState) {
   return route.routeName
 }
 
-class Router extends PureComponent {
+interface StateProps {
+  app: AppState;
+  router: any;
+}
+type Props = DispatchProp & StateProps;
+
+class Router extends PureComponent<Props> {
   componentWillMount() {
     BackHandler.addEventListener('hardwareBackPress', this.backHandle)
   }
@@ -131,4 +137,4 @@ class Router extends PureComponent {
   }
 }
 
-export default connect(({ app, router }) => ({ app, router }))(Router)
+export default connect(({ app, router }: WholeState) => ({ app, router }))(Router)

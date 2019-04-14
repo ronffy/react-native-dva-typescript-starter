@@ -1,17 +1,21 @@
 import { createAction, NavigationActions, Storage } from '../utils'
 import * as globalsService from '../services/globals'
+import { commonExtend } from './common'
+import { Dispatch } from 'redux';
+import { DvaModel } from '../types/dva';
 
-export default {
+export interface State {
+  login: boolean;
+  loading: boolean;
+  fetching: boolean;
+}
+
+const model: DvaModel<State> = {
   namespace: 'app',
   state: {
     login: false,
     loading: true,
     fetching: false,
-  },
-  reducers: {
-    updateState(state, { payload }) {
-      return { ...state, ...payload }
-    },
   },
   effects: {
     *loadStorage(action, { call, put }) {
@@ -33,8 +37,10 @@ export default {
     },
   },
   subscriptions: {
-    setup({ dispatch }) {
+    setup({ dispatch }: { dispatch: Dispatch }) {
       dispatch({ type: 'loadStorage' })
     },
   },
 }
+
+export default commonExtend(model);
