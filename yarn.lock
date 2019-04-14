@@ -906,10 +906,10 @@
     query-string "^6.2.0"
     react-is "^16.6.3"
 
-"@react-navigation/native@~3.3.0":
-  version "3.3.0"
-  resolved "http://registry.npm.taobao.org/@react-navigation/native/download/@react-navigation/native-3.3.0.tgz#def7a94ef17581a404a3de2a3200f986e999dac1"
-  integrity sha1-3vepTvF1gaQEo94qMgD5humZ2sE=
+"@react-navigation/native@~3.4.0":
+  version "3.4.1"
+  resolved "http://registry.npm.taobao.org/@react-navigation/native/download/@react-navigation/native-3.4.1.tgz#e1fbf334ac834a9f10dd7d9c3af3e36939486089"
+  integrity sha1-4fvzNKyDSp8Q3X2cOvPjaTlIYIk=
   dependencies:
     hoist-non-react-statics "^3.0.1"
     react-native-safe-area-view "^0.13.0"
@@ -988,14 +988,6 @@
   resolved "http://registry.npm.taobao.org/@types/qs/download/@types/qs-6.5.3.tgz#1c3b71b091eaeaf5924538006b7f70603ce63d38"
   integrity sha1-HDtxsJHq6vWSRTgAa39wYDzmPTg=
 
-"@types/react-native@*":
-  version "0.57.43"
-  resolved "http://registry.npm.taobao.org/@types/react-native/download/@types/react-native-0.57.43.tgz#a4d3fa7be905a8e28b7682220335dacefffd816f"
-  integrity sha1-pNP6e+kFqOKLdoIiAzXazv/9gW8=
-  dependencies:
-    "@types/prop-types" "*"
-    "@types/react" "*"
-
 "@types/react-native@^0.57.42":
   version "0.57.42"
   resolved "http://registry.npm.taobao.org/@types/react-native/download/@types/react-native-0.57.42.tgz#06ad92cd1378146402b7667de13cb7b935d194d6"
@@ -1003,14 +995,6 @@
   dependencies:
     "@types/prop-types" "*"
     "@types/react" "*"
-
-"@types/react-navigation@^3.0.6":
-  version "3.0.6"
-  resolved "http://registry.npm.taobao.org/@types/react-navigation/download/@types/react-navigation-3.0.6.tgz#97ab418eb6e29919f0f78785c5c360954e886d75"
-  integrity sha1-l6tBjrbimRnw94eFxcNglU6IbXU=
-  dependencies:
-    "@types/react" "*"
-    "@types/react-native" "*"
 
 "@types/react-redux@^7.0.6":
   version "7.0.6"
@@ -1042,13 +1026,6 @@
   integrity sha1-suCajBY7Kw9QcualrEFHQADfIRE=
   dependencies:
     redux-devtools-extension "*"
-
-"@types/redux-thunk@^2.1.0":
-  version "2.1.0"
-  resolved "http://registry.npm.taobao.org/@types/redux-thunk/download/@types/redux-thunk-2.1.0.tgz#bc2b6e972961831afb82a9bf4f06726e351f9416"
-  integrity sha1-vCtulylhgxr7gqm/TwZybjUflBY=
-  dependencies:
-    redux-thunk "*"
 
 "@types/redux@^3.6.0":
   version "3.6.0"
@@ -5444,17 +5421,17 @@ react-navigation-drawer@1.2.1:
   dependencies:
     react-native-tab-view "^1.2.0"
 
-react-navigation-redux-helpers@^2.0.2:
-  version "2.0.9"
-  resolved "http://registry.npm.taobao.org/react-navigation-redux-helpers/download/react-navigation-redux-helpers-2.0.9.tgz#244e7ebbc43481602b1e7948a491b34a312dca06"
-  integrity sha1-JE5+u8Q0gWArHnlIpJGzSjEtygY=
+react-navigation-redux-helpers@^3.0.0:
+  version "3.0.2"
+  resolved "http://registry.npm.taobao.org/react-navigation-redux-helpers/download/react-navigation-redux-helpers-3.0.2.tgz#612e1d5b1378ba0c17b6a2d8ec9a01cc698a3a16"
+  integrity sha1-YS4dWxN4ugwXtqLY7JoBzGmKOhY=
   dependencies:
     invariant "^2.2.2"
 
-react-navigation-stack@1.2.0:
-  version "1.2.0"
-  resolved "http://registry.npm.taobao.org/react-navigation-stack/download/react-navigation-stack-1.2.0.tgz#d1d76d28df75e55302c67b078479f95bd4559d2f"
-  integrity sha1-0ddtKN915VMCxnsHhHn5W9RVnS8=
+react-navigation-stack@1.3.0:
+  version "1.3.0"
+  resolved "http://registry.npm.taobao.org/react-navigation-stack/download/react-navigation-stack-1.3.0.tgz#34bbddb068c094c9ab843e36059b9fd92b728250"
+  integrity sha1-NLvdsGjAlMmrhD42BZuf2StyglA=
 
 react-navigation-tabs@1.1.2:
   version "1.1.2"
@@ -5466,15 +5443,15 @@ react-navigation-tabs@1.1.2:
     react-lifecycles-compat "^3.0.4"
     react-native-tab-view "^1.3.4"
 
-react-navigation@^3.7.1:
-  version "3.7.1"
-  resolved "http://registry.npm.taobao.org/react-navigation/download/react-navigation-3.7.1.tgz#36bb1333c929a4cfc75d19f2e5179a08cd9e19f4"
-  integrity sha1-NrsTM8kppM/HXRny5ReaCM2eGfQ=
+react-navigation@^3.5.0:
+  version "3.8.1"
+  resolved "http://registry.npm.taobao.org/react-navigation/download/react-navigation-3.8.1.tgz#9df7ba8a7d3f4d2487dab576b79cf9cfc7f93d5a"
+  integrity sha1-nfe6in0/TSSH2rV2t5z5z8f5PVo=
   dependencies:
     "@react-navigation/core" "~3.3.0"
-    "@react-navigation/native" "~3.3.0"
+    "@react-navigation/native" "~3.4.0"
     react-navigation-drawer "1.2.1"
-    react-navigation-stack "1.2.0"
+    react-navigation-stack "1.3.0"
     react-navigation-tabs "1.1.2"
 
 react-proxy@^1.1.7:
@@ -5596,11 +5573,6 @@ redux-saga@^0.16.0:
   version "0.16.2"
   resolved "http://registry.npm.taobao.org/redux-saga/download/redux-saga-0.16.2.tgz#993662e86bc945d8509ac2b8daba3a8c615cc971"
   integrity sha1-mTZi6GvJRdhQmsK42ro6jGFcyXE=
-
-redux-thunk@*, redux-thunk@^2.3.0:
-  version "2.3.0"
-  resolved "http://registry.npm.taobao.org/redux-thunk/download/redux-thunk-2.3.0.tgz#51c2c19a185ed5187aaa9a2d08b666d0d6467622"
-  integrity sha1-UcLBmhhe1Rh6qpotCLZm0NZGdiI=
 
 redux@*, redux@^4.0.0, redux@^4.0.1:
   version "4.0.1"

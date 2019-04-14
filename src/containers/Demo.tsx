@@ -95,7 +95,7 @@ class Demo extends React.Component<Props, State> {
         {/* 年龄处理 */}
         <Text
           style={styles.textAge}
-          onPress={onPressAge.bind(this, age + 1)}
+          onPress={() => onPressAge(age + 1)}
         >
           点我年龄加1：{age}
         </Text>

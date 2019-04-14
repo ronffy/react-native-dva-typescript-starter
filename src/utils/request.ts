@@ -12,6 +12,7 @@ interface Interceptor {
 type ChainItem = ((args: any) => any) | undefined;
 
 interface RequestConfig {
+  url: string;
   method: string;
   body?: any;
   headers?: any;
@@ -31,8 +32,8 @@ let interceptors = {
 function dispatchRequest(config: RequestConfig): Promise<Response> {
   const {url, ...options} = config;
   
-  return fetch(url, options)
-  .then(response => response.json())
+  // return fetch(url, options)
+  // .then(response => response.json())
 
   return new Promise(res => {
     setTimeout(() => {
@@ -55,10 +56,12 @@ const request = function (url: string, options: RequestInit = {}): Promise<any> 
     delete options.body;
   }
 
-  const config = {
+  const config: RequestConfig = {
     url,
     ...options,
   }
+
+  return dispatchRequest(config);
 
   let chain: ChainItem[] = [dispatchRequest, undefined];
   let promise = Promise.resolve(config);

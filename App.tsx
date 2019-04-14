@@ -9,7 +9,7 @@ const app = dva({
   models: [appModel],
   extraReducers: { router: routerReducer },
   onAction: [routerMiddleware],
-  onError(e) {
+  onError(e: any) {
     console.log('onError', e)
   },
 })
