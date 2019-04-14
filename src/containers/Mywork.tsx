@@ -5,7 +5,7 @@
 
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
-import { Button, Icon } from '@ant-design/react-native';
+import { Button } from '@ant-design/react-native';
 import { connect, DispatchProp } from 'react-redux';
 import { NavigationActions } from '../utils'
 
@@ -22,13 +22,8 @@ class Mywork extends React.Component<Props> {
   }
 
   static navigationOptions = {
-    headerTitle: '我的工作',
-    headerLeft: (
-      <Icon name="left" size="md" />
-    ),
-    headerRight: (
-      <Icon name="setting" size="md" color="blue" />
-    ),
+    mode: 'modal',
+    headerMode: 'none',
   };
 
   render() {

@@ -8,11 +8,16 @@ export const login = () => {
 
 
 export const requestChangeText = (name: string) => {
-  return request(API.test1, {
-    body: {
-      name
-    }
+  return new Promise(res => {
+    setTimeout(() => {
+      res(name)
+    }, 1000);
   })
+  // return request(API.test1, {
+  //   body: {
+  //     name
+  //   }
+  // })
 }
 
 

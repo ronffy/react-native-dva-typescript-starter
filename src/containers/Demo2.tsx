@@ -4,18 +4,37 @@
  */
 
 import React from 'react';
-import { Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet } from 'react-native';
+import { connect, DispatchProp } from 'react-redux';
+import { NavigationActions } from '../utils'
+import { Button } from '../components';
 
-class Demo2 extends React.Component {
+type Props = DispatchProp;
+
+class Demo2 extends React.Component<Props> {
+  static navigationOptions = {
+    mode: 'modal',
+    headerMode: 'none',
+  }
+
+  onPressRouteBtn = () => {
+    this.props.dispatch(NavigationActions.navigate({
+      routeName: 'Mylife'
+    }));
+  }
 
   render() {
     return (
-      <Text style={styles.text}>demo2</Text>
+      <View>
+        <Text style={styles.text}>demo2</Text>
+        <Button text="Go Back" onPress={this.onPressRouteBtn} />
+      </View>
+      
     );
   }
 }
 
-export default Demo2
+export default connect()(Demo2)
 
 const styles = StyleSheet.create({
   text: {

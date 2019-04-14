@@ -16,9 +16,7 @@ const model: DvaModel<State> = {
   effects: {
     *saveText({ payload }, { call, put }) {
       const { name } = payload;
-      const newName = yield call(globalsService.requestChangeText, {
-        name,
-      })
+      const newName = yield call(globalsService.requestChangeText, name)
       yield put({
         type: 'updateState',
         payload: {

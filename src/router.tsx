@@ -15,8 +15,11 @@ import { connect, DispatchProp } from 'react-redux'
 import Loading from './components/Loading'
 import Login from './containers/Login'
 import Home from './containers/Demo'
+import Demo2 from './containers/Demo2'
 import Account from './containers/Account'
 import Detail from './containers/Detail'
+import Mywork from './containers/Mywork'
+import Mylife from './containers/Mylife'
 
 import { WholeState, AppState } from './types/globals';
 
@@ -24,11 +27,11 @@ import { WholeState, AppState } from './types/globals';
 const HomeNavigator = createBottomTabNavigator({
   Home,
   Account,
+  Demo2,
 })
 
 HomeNavigator.navigationOptions = ({ navigation }: any) => {
   const { routeName } = navigation.state.routes[navigation.state.index];
-
   return {
     headerTitle: routeName,
   }
@@ -38,6 +41,8 @@ const MainNavigator = createStackNavigator(
   {
     HomeNavigator,
     Detail,
+    Mylife,
+    Mywork,
   },
   {
     headerMode: 'float',
