@@ -5,18 +5,20 @@
 
 在项目根目录执行以下命令
 ```
-react-native run-ios
+npm run ios
 ```
 
 ## 跑android项目
 
 先打开 Android Studio , 运行模拟器或真机，然后在项目根目录执行以下命令
 ```
-react-native run-android
+npm run android
 ```
 
 
 ## 相关工具
+
+!! 本项目使用的是`react-native-debugger`
 
 ### Debug JS Remotely
 
@@ -57,19 +59,16 @@ open "rndebugger://set-debugger-loc?host=localhost&port=8081"
 
 ### 导航
 
-https://reactnavigation.org/docs/zh-Hans/getting-started.html
+[React Navigation](https://reactnavigation.org/docs/zh-Hans/getting-started.html)
+[react-navigation-redux-helpers](https://github.com/react-navigation/react-navigation-redux-helpers)
 
 
 ## ui组件库
 
+!! 本项目使用`ant-design-mobile-rn`
+
 [ant-design-mobile-rn](https://github.com/ant-design/ant-design-mobile-rn)
 [react-native-elements](https://github.com/react-native-training/react-native-elements)
-
-调调、调调、调调！太有调调了！
-我亲亲爱的美女杀手，每次出场都像在走一场巴黎时装秀，
-
-配乐
-
 
 
 ## 存在问题
@@ -82,33 +81,3 @@ https://reactnavigation.org/docs/zh-Hans/getting-started.html
 解决方法：
 选中模拟器 -> Debug -> Slow Animations 取消选中
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-下周一分享下入门、上手
-
-
-
-
-
-
-## 必备知识点
-
-jsx、生命周期、组件等相关react知识
-
-flex布局

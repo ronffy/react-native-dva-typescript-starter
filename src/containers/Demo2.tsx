@@ -27,7 +27,7 @@ class Demo2 extends React.Component<Props> {
     return (
       <View>
         <Text style={styles.text}>demo2</Text>
-        <Button text="Go Back" onPress={this.onPressRouteBtn} />
+        <Button text="点击去我的生活页" onPress={this.onPressRouteBtn} />
       </View>
       
     );

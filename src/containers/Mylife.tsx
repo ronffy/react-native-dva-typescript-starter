@@ -23,9 +23,6 @@ class Mylife extends React.Component<Props> {
 
   static navigationOptions = {
     headerTitle: '我的生活',
-    headerLeft: (
-      <Icon name="left" size="md" />
-    ),
     headerRight: (
       <Icon name="setting" size="md" color="blue" />
     ),
