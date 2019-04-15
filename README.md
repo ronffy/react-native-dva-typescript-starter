@@ -1,6 +1,24 @@
 
 # RN 项目
 
+## 安装项目
+
+安装依赖
+```
+yarn
+```
+
+链接`antd`的字体图标
+```
+react-native link @ant-design/icons-react-native
+```
+
+安装`react-native-debugger`
+```
+brew update && brew cask install react-native-debugger
+```
+
+
 ## 跑ios项目
 
 在项目根目录执行以下命令
