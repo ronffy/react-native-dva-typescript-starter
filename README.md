@@ -60,6 +60,7 @@ open "rndebugger://set-debugger-loc?host=localhost&port=8081"
 ### 导航
 
 [React Navigation](https://reactnavigation.org/docs/zh-Hans/getting-started.html)
++
 [react-navigation-redux-helpers](https://github.com/react-navigation/react-navigation-redux-helpers)
 
 
@@ -77,7 +78,7 @@ open "rndebugger://set-debugger-loc?host=localhost&port=8081"
 
 2. Network网络查看功能未实现
 
-3. ～～模拟器切页面较慢～～
+3. ~~模拟器切页面较慢~~  
 解决方法：
 选中模拟器 -> Debug -> Slow Animations 取消选中
 
