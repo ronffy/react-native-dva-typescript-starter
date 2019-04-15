@@ -14,6 +14,7 @@ import { WholeState } from '../types/globals';
 interface StateProps {
   name: string;
   age: number;
+  loading: boolean;
 }
 interface OwnProps {
 }
@@ -72,7 +73,7 @@ class Demo extends React.Component<Props, State> {
   }
 
   render() {
-    const { age, name } = this.props;
+    const { age, name, loading } = this.props;
     const { nameInput } = this.state;
     return (
       <View style={styles.container}>
@@ -87,6 +88,7 @@ class Demo extends React.Component<Props, State> {
         <Button
           style={styles.button}
           onPress={this.onPressBtn}
+          disabled={loading}
           type="primary"
         >
           <Text>确定</Text>
@@ -106,10 +108,11 @@ class Demo extends React.Component<Props, State> {
   }
 }
 
-const mapStateToProps: MapStateToPropsParam<StateProps, OwnProps, WholeState> = ({ demo }: WholeState) => ({
+const mapStateToProps: MapStateToPropsParam<StateProps, OwnProps, WholeState> = ({ demo, loading }: WholeState) => ({
   name: demo.name,
-  age: demo.age
-});
+  age: demo.age,
+  loading: loading.effects['demo/saveText']
+})
 
 export default connect(mapStateToProps)(Demo)
 

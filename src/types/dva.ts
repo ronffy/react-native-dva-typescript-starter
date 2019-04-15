@@ -44,3 +44,10 @@ export interface DvaModel<T> {
     effects?: DvaModelEffects,
     subscriptions?: object
 }
+
+
+export interface DvaLoading {
+    global: boolean;
+    models: any;
+    effects: any;
+}
