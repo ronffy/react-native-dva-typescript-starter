@@ -1,8 +1,8 @@
-import React, { Component } from 'react'
-import { StyleSheet, View, Text, Image, ActivityIndicator } from 'react-native'
-import { connect, DispatchProp } from 'react-redux'
-import { Button, Touchable } from '../components'
-import { createAction, NavigationActions } from '../utils'
+import React from 'react';
+import { StyleSheet, View, Image, ActivityIndicator } from 'react-native';
+import { connect, DispatchProp } from 'react-redux';
+import { Button, Touchable } from '../components';
+import { createAction, NavigationActions } from '../utils';
 import { WholeState } from '../types/globals';
 
 interface StateProps {
@@ -14,7 +14,7 @@ interface OwnProps {
 }
 type Props = DispatchProp & StateProps & OwnProps;
 
-class Login extends Component<Props> {
+class Login extends React.PureComponent<Props> {
   static navigationOptions = {
     title: 'Login',
   }

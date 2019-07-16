@@ -7,13 +7,13 @@ import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { Button, Icon } from '@ant-design/react-native';
 import { connect, DispatchProp } from 'react-redux';
-import { NavigationActions } from '../utils'
+import { NavigationActions } from '../utils';
 
 interface OwnProps {
 }
 type Props = DispatchProp & OwnProps;
 
-class Mylife extends React.Component<Props> {
+class Mylife extends React.PureComponent<Props> {
 
   onPressRouteBtn = () => {
     this.props.dispatch(NavigationActions.navigate({

@@ -1,15 +1,15 @@
-import React from 'react'
-import { StyleSheet, Text } from 'react-native'
-import Touchable from './Touchable'
+import React, { SFC, ReactNode } from 'react';
+import { StyleSheet, Text } from 'react-native';
+import Touchable from './Touchable';
 import { BaseProps } from '../types/globals';
 
 interface OwnProps {
-  text: string;
+  text: string | ReactNode;
 }
 
 type Props = BaseProps & OwnProps;
 
-export function Button({ text, children, style, textStyle, ...rest }: Props) {
+const Button: SFC<Props> = function ({ text, children, style, textStyle, ...rest }) {
   return (
     <Touchable style={[styles.button, style]} {...rest}>
       <Text style={[styles.text, textStyle]}>{text || children}</Text>

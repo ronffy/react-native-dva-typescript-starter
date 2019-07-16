@@ -37,7 +37,7 @@ export interface DvaModelEffects {
     [effectName: string]: DvaModelEffect
 }
 
-export interface DvaModel<T> {
+export interface DvaModel<T = any> {
     namespace: string,
     state?: T,
     reducers?: DvaModelReducers,

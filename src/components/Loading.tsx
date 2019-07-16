@@ -1,7 +1,7 @@
-import React from 'react'
-import { StyleSheet, View, ActivityIndicator } from 'react-native'
+import React, { SFC } from 'react';
+import { StyleSheet, View, ActivityIndicator } from 'react-native';
 
-const Loading = () => (
+const Loading: SFC<{}> = () => (
   <View style={styles.container}>
     <ActivityIndicator />
   </View>

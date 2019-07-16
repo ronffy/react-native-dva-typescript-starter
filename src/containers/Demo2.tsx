@@ -6,12 +6,12 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { connect, DispatchProp } from 'react-redux';
-import { NavigationActions } from '../utils'
+import { NavigationActions } from '../utils';
 import { Button } from '../components';
 
 type Props = DispatchProp;
 
-class Demo2 extends React.Component<Props> {
+class Demo2 extends React.PureComponent<Props> {
   static navigationOptions = {
     mode: 'modal',
     headerMode: 'none',

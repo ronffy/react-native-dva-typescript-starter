@@ -1,12 +1,9 @@
-import React, { Component } from 'react'
-import { StyleSheet, View, Image } from 'react-native'
-import { connect, DispatchProp } from 'react-redux'
-import { Button } from '../components'
-import { createAction, NavigationActions } from '../utils'
+import React from 'react';
+import { StyleSheet, View, Image } from 'react-native';
+import { connect, DispatchProp } from 'react-redux';
+import { Button } from '../components';
+import { createAction, NavigationActions } from '../utils';
 import { WholeState } from '../types/globals';
-
-
-
 
 interface StateProps {
   login: boolean;
@@ -15,7 +12,7 @@ interface OwnProps {
 }
 type Props = DispatchProp & StateProps & OwnProps;
 
-class Account extends Component<Props> {
+class Account extends React.PureComponent<Props> {
   static navigationOptions = {
     tabBarLabel: 'Account',
     tabBarIcon: ({ focused, tintColor }: any) => (

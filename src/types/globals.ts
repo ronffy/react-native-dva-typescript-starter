@@ -1,8 +1,9 @@
 
-import React  from 'react-native';
+import { ReactNode } from 'react';
+import React from 'react-native';
 
 export interface BaseProps {
-  children?: any;
+  children?: ReactNode;
   style?: React.StyleProp<any>;
   [props: string]: any;
 }

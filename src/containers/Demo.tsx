@@ -3,16 +3,16 @@
  * @author ronffy
  */
 
-import React from 'react';
+import React, { ReactNode } from 'react';
 import DemoCompt from '../components/DemoCompt';
 import { View, StyleSheet, Text } from 'react-native';
 import { Button, InputItem } from '@ant-design/react-native';
 import { connect, DispatchProp, MapStateToPropsParam } from 'react-redux';
-import { NavigationActions } from '../utils'
+import { NavigationActions } from '../utils';
 import { WholeState } from '../types/globals';
 
 interface StateProps {
-  name: string;
+  name: string | ReactNode;
   age: number;
   loading: boolean;
 }
@@ -24,7 +24,7 @@ type State = {
   nameInput: string;
 }
 
-class Demo extends React.Component<Props, State> {
+class Demo extends React.PureComponent<Props, State> {
   
   state = {
     nameInput: '',

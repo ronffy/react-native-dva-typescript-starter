@@ -1,25 +1,25 @@
-import React, { PureComponent } from 'react'
-import { BackHandler, Animated, Easing } from 'react-native'
+import React from 'react';
+import { BackHandler, Animated, Easing } from 'react-native';
 import {
   createStackNavigator,
   createBottomTabNavigator,
   NavigationActions,
-} from 'react-navigation'
+} from 'react-navigation';
 import {
   reduxifyNavigator,
   createReactNavigationReduxMiddleware,
   createNavigationReducer,
-} from 'react-navigation-redux-helpers'
-import { connect, DispatchProp } from 'react-redux'
+} from 'react-navigation-redux-helpers';
+import { connect, DispatchProp } from 'react-redux';
 
-import Loading from './components/Loading'
-import Login from './containers/Login'
-import Home from './containers/Demo'
-import Demo2 from './containers/Demo2'
-import Account from './containers/Account'
-import Detail from './containers/Detail'
-import Mywork from './containers/Mywork'
-import Mylife from './containers/Mylife'
+import Loading from './components/Loading';
+import Login from './containers/Login';
+import Home from './containers/Demo';
+import Demo2 from './containers/Demo2';
+import Account from './containers/Account';
+import Detail from './containers/Detail';
+import Mywork from './containers/Mywork';
+import Mylife from './containers/Mylife';
 
 import { WholeState, AppState } from './types/globals';
 
@@ -114,7 +114,7 @@ interface StateProps {
 }
 type Props = DispatchProp & StateProps;
 
-class Router extends PureComponent<Props> {
+class Router extends React.PureComponent<Props> {
   componentWillMount() {
     BackHandler.addEventListener('hardwareBackPress', this.backHandle)
   }

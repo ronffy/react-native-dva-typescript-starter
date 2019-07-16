@@ -1,8 +1,8 @@
-import React, { Component } from 'react'
-import { StyleSheet, View } from 'react-native'
-import { connect } from 'react-redux'
-import { Button } from '../components'
-import { NavigationActions } from '../utils'
+import React from 'react';
+import { StyleSheet, View } from 'react-native';
+import { connect } from 'react-redux';
+import { Button } from '../components';
+import { NavigationActions } from '../utils';
 import { DispatchProp } from 'react-redux';
 
 
@@ -13,7 +13,7 @@ type Props = DispatchProp & OwnProps;
 type State = {
 }
 
-class Detail extends Component<Props, State> {
+class Detail extends React.PureComponent<Props, State> {
   static navigationOptions = {
     title: 'Detail',
   }

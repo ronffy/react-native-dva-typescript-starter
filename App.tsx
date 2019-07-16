@@ -1,8 +1,8 @@
-import React from 'react'
+import React from 'react';
 
-import dva from './src/utils/dva'
-import Router, { routerMiddleware, routerReducer } from './src/router'
-import models from './src/models'
+import dva from './src/utils/dva';
+import Router, { routerMiddleware, routerReducer } from './src/router';
+import models from './src/models';
 
 const app = dva({
   initialState: {},
