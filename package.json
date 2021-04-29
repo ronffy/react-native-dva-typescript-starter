@@ -17,7 +17,7 @@
     "dva-immer": "^0.4.2",
     "dva-loading": "^3.0.2",
     "dva-model-extend": "^0.1.2",
-    "immer": "^2.1.5",
+    "immer": "^8.0.1",
     "prop-types": "^15.7.2",
     "qs": "^6.7.0",
     "react": "16.8.3",
